@@ -21,7 +21,7 @@ Steps to Use/Install
 4. The config.json file can be found in ```*cache_path*/CodeIniter/config.json```
 5. Here you can add your own snippets for various file formats. The format is the key and the snippet is the value.
 6. After doing this, open a file in Sublime of one of the formats.
-7. Use the console to write ```view.run_command('initialise')```.
+7. Open the command palette (```Ctrl + Shift + P```) and type initialise, select the open ```File: Initialise```. Alternatively, use the console to write ```view.run_command('initialise')```.
 8. Voila! Your file has been initialised with your custom snippet.
 
 Plugin is still in testing and this page will soon be updated with screenshots and any changes for Mac and Linux platforms
