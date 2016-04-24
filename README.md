@@ -4,6 +4,11 @@ CodeIniter - Sublime Text 3
 This extension allows you to initialise files of various formats with snippets of code.
 <br>Currently tested for Sublime Text 3 on Windows 10.
 
+Inspiration
+--------------------
+Since I do not use an IDE while doing competitive programming, I would constantly write obvious code like ```int main()``` and 
+```public static void main(String[] args)```. This is an attempt to reduce that effort by doing the same task with a single command.
+
 Steps to Use/Install
 --------------------
 1. Clone the repo
