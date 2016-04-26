@@ -2,7 +2,7 @@ CodeIniter - Sublime Text 3
 ===========================
 
 This extension allows you to initialise files of various formats with snippets of code.
-<br>Currently tested for Sublime Text 3 on Windows 10.
+<br>Currently tested for Sublime Text 3 on Windows 10, Ubuntu 14.04-LTS.
 
 Inspiration
 --------------------
@@ -24,5 +24,5 @@ Steps to Use/Install
 7. Open the command palette (```Ctrl + Shift + P```) and type initialise, select the option ```File: Initialise```. Alternatively, use the console to write ```view.run_command('initialise')```.
 8. Voila! Your file has been initialised with your custom snippet.
 
-Plugin is still in testing and this page will soon be updated with screenshots and any changes for Mac and Linux platforms
+Plugin is still in testing and this page will soon be updated with any changes for OS X.
 <br>After proper testing I plan to upload this plugin at Package Control for public use.
