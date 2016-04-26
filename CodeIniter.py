@@ -20,7 +20,11 @@ class InitialiseCommand(sublime_plugin.TextCommand):
 
 class FileListener(sublime_plugin.EventListener):
     def on_load_async(self, view):
-        path = sublime.cache_path()
+        if int(sublime.version()) > 3000: 
+            path = sublime.cache_path()
+        else:
+            path = sublime.installed_packages_path()
+        print(path)
         platform = sublime.platform()
         if platform == 'linux' or platform == 'osx':
             path = path + '/CodeIniter'
