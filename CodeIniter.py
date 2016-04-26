@@ -7,7 +7,11 @@ import json
 class InitialiseCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         decoder = json.JSONDecoder()
-        path = sublime.cache_path() + '\CodeIniter\config.json'
+        platform = sublime.platform()
+        if platform == 'linux' or platform == 'osx':
+            path = sublime.cache_path() + '/CodeIniter/config.json'
+        else:
+            path = sublime.cache_path() + '\CodeIniter\config.json'
         fobj = open(path, 'r')
         s = fobj.read()
         db = decoder.decode(s)
@@ -24,7 +28,6 @@ class FileListener(sublime_plugin.EventListener):
             path = sublime.cache_path()
         else:
             path = sublime.installed_packages_path()
-        print(path)
         platform = sublime.platform()
         if platform == 'linux' or platform == 'osx':
             path = path + '/CodeIniter'
