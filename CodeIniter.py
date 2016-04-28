@@ -8,10 +8,6 @@ class InitialiseCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         decoder = json.JSONDecoder()
         platform = sublime.platform()
-        if int(sublime.version()) > 3000:
-            path = sublime.cache_path()
-        else:
-            path = sublime.installed_packages_path()
         if platform == 'linux' or platform == 'osx':
             path = sublime.cache_path() + '/CodeIniter/config.json'
         else:
@@ -28,11 +24,8 @@ class InitialiseCommand(sublime_plugin.TextCommand):
 
 class FileListener(sublime_plugin.EventListener):
     def on_load_async(self, view):
-        if int(sublime.version()) > 3000: 
-            path = sublime.cache_path()
-        else:
-            path = sublime.installed_packages_path()
         platform = sublime.platform()
+        path = sublime.cache_path()
         if platform == 'linux' or platform == 'osx':
             path = path + '/CodeIniter'
         else:
